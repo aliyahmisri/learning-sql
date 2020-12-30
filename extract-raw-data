@@ -1,0 +1,6 @@
+SELECT
+a.column_1,
+a.column_2,
+a.column_3
+
+FROM table_name a
