@@ -1,1 +1,26 @@
+#Given there are 2 tables in database; 
 
+#1 Table 1 which has details of customer order: customer_order
+#2 Table 2 which has details of customer details: customer_details
+
+Notes:
+#1 The common key between the two tables are customer_id which we are required to use when joining the two tables (ON cd.customer_id = co.customer_id)
+#2 The naming of table (eg: customer_order co) can be anything as it is a label for a reference when you choose columns from which table that you want to extract.
+
+#RIGHT JOIN
+
+*** code starts ***
+
+SELECT
+co.customer_id,
+cd.customer_name,
+cd.customer_phone_number
+co.order_number,
+co.order_items,
+co.order_price
+
+FROM customer_order co
+RIGHT JOIN customer_details cd ON cd.customer_id = co.customer_id
+
+
+*** code ends ***
